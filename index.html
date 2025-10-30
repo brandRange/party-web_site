@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Summer Sizzle: BBQ, Steak & Drinks</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font family -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0d; /* Dark background */
+        }
+    </style>
+</head>
+<body class="text-gray-100 min-h-screen">
+
+    <!-- Header & Hero Section -->
+    <header class="bg-gray-900 sticky top-0 z-50 shadow-xl transition-all duration-300" id="header-nav">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-black tracking-wider text-red-500 uppercase">
+                Summer Sizzle
+            </h1>
+            <nav>
+                <a href="#details" class="text-sm font-medium hover:text-orange-400 transition mr-4">Details</a>
+                <a href="#menu" class="text-sm font-medium hover:text-orange-400 transition mr-4">The Spread</a>
+                <a href="#location" class="text-sm font-medium hover:text-orange-400 transition">Location</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Banner -->
+        <!-- <section class="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://www.bing.com/images/search?view=detailV2&ccid=zLRohhE8&id=C16A1E777D44D3CC77689BDAAC047F1FF82B9999&thid=OIP.zLRohhE8aRoCggz2GpI1OwHaEJ&mediaurl=https%3a%2f%2fimg.freepik.com%2fpremium-photo%2fbbq-steak-barbecue-grilled-beef-meat-background-images-hd-wallpapers_976375-1041.jpg%3fw%3d2000&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.ccb46886113c691a02820cf61a92353b%3frik%3dmZkr%252bB9%252fBKzamw%26pid%3dImgRaw%26r%3d0&exph=1121&expw=2000&q=bbq+steak+image&FORM=IRPRST&ck=ADD3DB5D3E2C78EFEAEEFC04E7BD2EBE&selectedIndex=0&itb=0&idpp=overlayview&ajaxhist=0&ajaxserp=0');">
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+            <div class="z-10 p-6 max-w-4xl mx-auto">
+                <p class="text-sm md:text-lg font-semibold tracking-widest uppercase text-orange-400 mb-2">You're Invited</p>
+                <h2 class="text-5xl md:text-8xl font-extrabold tracking-tight text-white leading-none mb-6">
+                    <span class="block text-red-500">BBQ &</span><span class="block">Drinks Bash</span>
+                </h2>
+                <button onclick="document.getElementById('details').scrollIntoView({ behavior: 'smooth' });" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    See Details
+                </button>
+            </div>
+        </section> -->
+        <!-- Hero Banner -->
+<section 
+  class="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-center bg-cover bg-center" 
+  style="background-image: url('https://img.freepik.com/premium-photo/bbq-steak-barbecue-grilled-beef-meat-background-images-hd-wallpapers_976375-1041.jpg?w=2000');">
+  
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+  <div class="z-10 p-6 max-w-4xl mx-auto">
+    <p class="text-sm md:text-lg font-semibold tracking-widest uppercase text-orange-400 mb-2">You're Invited</p>
+    <h2 class="text-5xl md:text-8xl font-extrabold tracking-tight text-white leading-none mb-6">
+      <span class="block text-red-500">BBQ &</span><span class="block">Drinks Bash</span>
+    </h2>
+    <button onclick="document.getElementById('details').scrollIntoView({ behavior: 'smooth' });" 
+      class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+      See Details
+    </button>
+  </div>
+</section>
+
+
+        <!-- Countdown Timer -->
+        <section class="bg-gray-900 py-10 md:py-16 border-t border-b border-gray-700">
+            <div class="max-w-4xl mx-auto text-center px-4">
+                <h3 class="text-xl md:text-3xl font-bold mb-6 text-orange-400">The Clock Is Ticking!</h3>
+                <div id="countdown" class="grid grid-cols-4 gap-4 text-white">
+                    <!-- Timer blocks populated by JS -->
+                </div>
+                <p id="countdown-message" class="mt-6 text-lg text-red-400 font-medium hidden">It's Party Time!</p>
+            </div>
+        </section>
+
+        <!-- Details Section -->
+        <section id="details" class="py-16 md:py-24 bg-gray-800">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Date Card -->
+                <div class="bg-gray-900 p-6 rounded-xl shadow-2xl border-t-4 border-red-500 text-center transform transition duration-300 hover:scale-[1.02]">
+                    <div class="text-4xl mb-4 text-red-500">🗓️</div>
+                    <h4 class="text-2xl font-bold mb-2">When</h4>
+                    <!-- UPDATED DATE TEXT -->
+                    <p id="party-date-display" class="text-xl font-light text-orange-300">Sunday, November 2nd</p>
+                    <p class="text-sm text-gray-400">Starts at 6:00 PM</p>
+                </div>
+                <!-- Location Card -->
+                <div class="bg-gray-900 p-6 rounded-xl shadow-2xl border-t-4 border-red-500 text-center transform transition duration-300 hover:scale-[1.02]">
+                    <div class="text-4xl mb-4 text-red-500">📍</div>
+                    <h4 class="text-2xl font-bold mb-2">Where</h4>
+                    <p class="text-xl font-light text-orange-300">The Shama Junction Spot</p>
+                    <p class="text-sm text-gray-400">Shama, Western Region, Ghana</p>
+                </div>
+                <!-- RSVP Card -->
+                <div class="bg-gray-900 p-6 rounded-xl shadow-2xl border-t-4 border-red-500 text-center transform transition duration-300 hover:scale-[1.02]">
+                    <div class="text-4xl mb-4 text-red-500">✅</div>
+                    <h4 class="text-2xl font-bold mb-2">RSVP</h4>
+                    <p class="text-xl font-light text-orange-300">Text John Doe</p>
+                    <p class="text-sm text-gray-400">Please let me know by July 15th!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu/Vibes Section -->
+        <section id="menu" class="py-16 md:py-24 bg-gray-900">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h3 class="text-4xl md:text-5xl font-extrabold text-white mb-4">The Spread & The Vibe</h3>
+                <p class="text-lg text-gray-400 mb-12">Come hungry, leave happy. We're firing up the grill and mixing up the finest cocktails.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                    <!-- Food Card -->
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-l-4 border-orange-500">
+                        <h5 class="text-xl font-bold text-orange-400 mb-3 flex items-center">
+                            🥩 The Main Event
+                        </h5>
+                        <ul class="list-disc ml-5 space-y-1 text-gray-300 text-sm">
+                            <li>Prime Ribeye & New York Strip</li>
+                            <li>Gourmet Burgers & Sausages</li>
+                            <li>Grilled Seasonal Vegetables</li>
+                            <li>Potato Salad & Slaw</li>
+                        </ul>
+                    </div>
+
+                    <!-- Drinks Card -->
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-l-4 border-orange-500">
+                        <h5 class="text-xl font-bold text-orange-400 mb-3 flex items-center">
+                            🍹 The Libations
+                        </h5>
+                        <ul class="list-disc ml-5 space-y-1 text-gray-300 text-sm">
+                            <li>Signature Smoked Old Fashioneds</li>
+                            <li>Craft Beer Selection (Local Brews)</li>
+                            <li>Fine Red & White Wines</li>
+                            <li>Non-alcoholic Spritzers</li>
+                        </ul>
+                    </div>
+
+                    <!-- Music Card -->
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-l-4 border-orange-500">
+                        <h5 class="text-xl font-bold text-orange-400 mb-3 flex items-center">
+                            🎶 The Soundtrack
+                        </h5>
+                        <ul class="list-disc ml-5 space-y-1 text-gray-300 text-sm">
+                            <li>Classic Rock & Blues Jams</li>
+                            <li>Chill Lo-Fi for Sunset</li>
+                            <li>Weird Al at 2 AM (Probably)</li>
+                            <li>Requests are always welcome!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Map Section -->
+        <section id="location" class="py-16 md:py-24 bg-gray-800">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <h3 class="text-4xl font-extrabold text-white mb-4">Find Your Way Here</h3>
+                <p class="text-lg text-gray-400 mb-8">Use the map below or plug the address into your GPS.</p>
+
+                <!-- Map Container -->
+                <div class="rounded-xl shadow-2xl overflow-hidden border-2 border-red-500 aspect-video w-full">
+                    <!-- IMPORTANT: The map has been updated to point to a general location in Shama, Ghana. -->
+                    <iframe 
+                        id="google-map-embed"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15915.228227976825!2d-1.5030248499999999!3d5.01168915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfde5c464c2084c9%3A0x67332219e917d057!2sShama%2C%20Ghana!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+                <p class="text-sm text-gray-500 mt-4">
+                    <span class="text-red-400 font-bold">Note:</span> The map currently shows a location near Shama. Please update the iframe `src` attribute inside the code with your specific party address at Shama Junction!
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-6 text-center text-gray-500 border-t border-gray-700">
+        <p>&copy; <span id="current-year"></span> The Summer Sizzle Party. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Countdown and Effects -->
+    <script>
+        // 1. Set the party date/time here (Year, MonthIndex 0-11, Day, Hour, Minute, Second)
+        // UPDATED DATE: Sunday, November 2nd, 2025, 6:00 PM (November is month index 10)
+        const partyDate = new Date(2025, 10, 2, 18, 0, 0).getTime();
+
+        const countdownElement = document.getElementById('countdown');
+        const countdownMessage = document.getElementById('countdown-message');
+        const headerNav = document.getElementById('header-nav');
+        
+        // Populate current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = partyDate - now;
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                countdownElement.innerHTML = '';
+                countdownMessage.classList.remove('hidden');
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            countdownElement.innerHTML = `
+                ${createTimeBlock(days, 'Days')}
+                ${createTimeBlock(hours, 'Hours')}
+                ${createTimeBlock(minutes, 'Minutes')}
+                ${createTimeBlock(seconds, 'Seconds')}
+            `;
+        }
+
+        function createTimeBlock(value, label) {
+            // Adds leading zero for single digits
+            const formattedValue = value < 10 && value >= 0 ? `0${value}` : value; 
+
+            return `
+                <div class="bg-gray-700 p-4 rounded-lg shadow-inner border border-red-500">
+                    <div class="text-4xl md:text-6xl font-extrabold text-red-400">${formattedValue}</div>
+                    <div class="text-sm font-medium uppercase mt-2 text-gray-300">${label}</div>
+                </div>
+            `;
+        }
+
+        // Run countdown initially and set interval
+        updateCountdown();
+        const countdownInterval = setInterval(updateCountdown, 1000);
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                headerNav.classList.remove('py-4');
+                headerNav.classList.add('py-2', 'bg-opacity-95');
+            } else {
+                headerNav.classList.remove('py-2', 'bg-opacity-95');
+                headerNav.classList.add('py-4');
+            }
+        });
+
+    </script>
+</body>
+</html>
